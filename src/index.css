@@ -12,8 +12,8 @@ body {
 
   background-image: radial-gradient(
     circle farthest-corner at 10% 20%,
-    #ffffff,
-    #040461
+    #040461,
+    #ffffff
   );
   background-repeat: no-repeat;
   background-attachment: fixed;
