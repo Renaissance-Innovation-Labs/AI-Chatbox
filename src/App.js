@@ -11,6 +11,8 @@ function App() {
   const [messages, setMessages] = useState([]);
   const [isThinking, setIsThinking] = useState(false);
 
+  const messagesEndRef = useRef(null);
+
   console.log(messages);
   const callOpenaiAPI = async () => {
     setMessages([...messages, { role: "system", content: input }]);
@@ -43,9 +45,6 @@ function App() {
     callOpenaiAPI();
   };
 
-  // useEffect(() => {
-  //   input && callOpenaiAPI();
-  // }, [messages]);
   const preloadSVG = (
     <>
       <svg
@@ -68,6 +67,15 @@ function App() {
     </>
   );
 
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    input && callOpenaiAPI();
+    scrollToBottom();
+  }, [messages]);
+
   return (
     <>
       <div className="relative max-w-3xl mx-auto min-h-[cal(100vh_-_150px)] pb-[170px]">
@@ -83,6 +91,7 @@ function App() {
             >
               {messages.content}
             </div>
+            <div ref={messagesEndRef}></div>
           </>
         ))}
         {isThinking && (
