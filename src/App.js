@@ -78,12 +78,12 @@ function App() {
 
   return (
     <>
-      <div className="relative max-w-3xl space-y-5 mx-auto my-5 min-h-[cal(100vh_-_150px)] pb-[170px]">
+      <div className="relative max-w-3xl space-y-5 mx-auto  my-5 min-h-[cal(100vh_-_150px)] pb-[170px]">
         {messages.map((messages, i) => (
           <div
             ref={messagesEndRef}
             key={i}
-            className={`p-3 max-w-3x rounded-lg w-4/5 overflow-y-auto whitespace-normal text-white my-2  ${
+            className={`m-3 p-3 max-w-3x rounded-lg w-3/5 overflow-y-auto whitespace-normal text-white my-2  ${
               messages.role !== "assistant"
                 ? "bg-blue-600 "
                 : "bg-gray-900 ml-auto"
