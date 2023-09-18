@@ -1,4 +1,4 @@
-# ChatBot with React, Tailwind CSS, and OpenAI GPT-3 Readme
+# ChatBot with React, Tailwind CSS, and OpenAI GPT-3.5 Turbo Readme
 
 ## Table of Contents
 
