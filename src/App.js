@@ -123,8 +123,8 @@ function App() {
 
       {!messages.length && (
         <div
-          className="absolute top-[200px] left-1/3
-          transform-translate-x-1/2 max-w-[500px]"
+          className="absolute top-[200px]
+          transform-translate-x-1/2 max-w-[500px] pl-6 pr-6 md:left-1/3"
         >
           <h1 className="font-black text-white text-4xl">ChatBot</h1>
           <p className="text-white mt-2">
